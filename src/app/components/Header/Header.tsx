@@ -11,7 +11,10 @@ export default function Header({}: Props) {
   return (
     <header className="h-20 flex items-center justify-between ">
       <div className="flex justify-start gap-8">
-        <Image src={logo} alt="logo" />
+        <Link href={{ pathname: "/" }}>
+          <Image src={logo} alt="logo" />
+        </Link>
+
         <nav className="flex flex-row gap-4">
           {navItems.map((item, index) => (
             <Link
@@ -30,10 +33,12 @@ export default function Header({}: Props) {
           onChange={(value: string) => console.log("Value: " + value)}
           placeholder={"Search for products or brands....."}
         />
-        <div className=" flex gap-5">
+        <div className=" flex justify-center items-center gap-5">
           <Image src={wishlist} alt="cart" />
           <Image src={profile} alt="cart" />
-          <Image src={cart} alt="cart" />
+          <Link href={{ pathname: "/cart" }}>
+            <Image src={cart} alt="cart" />
+          </Link>
         </div>
       </div>
     </header>

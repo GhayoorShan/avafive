@@ -47,14 +47,16 @@ export const baseSliceAPI = createApi({
       const { tags = [] } = apiDetails;
 
       endPoints[key] = build.query({
-        query: (body: any) => ({
-          url: apiDetails.url,
-          method: apiDetails.method,
-          body:
-            apiDetails.method === "GET"
-              ? undefined
-              : { ...body, language: "en" },
-        }),
+        query: (queryParameters) => {
+          const url = !queryParameters
+            ? apiDetails.url
+            : `${apiDetails.url}/${queryParameters}`;
+          const requestOptions = {
+            url,
+            method: apiDetails.method,
+          };
+          return requestOptions;
+        },
         // providesTags: tags as any,
         transformResponse: (response, meta, arg) =>
           apiDetails.transformResponse(response),
@@ -67,4 +69,4 @@ export const baseSliceAPI = createApi({
   },
 });
 
-export const { useProductsQuery } = baseSliceAPI;
+export const { useProductsQuery, useProductDetailsQuery } = baseSliceAPI;

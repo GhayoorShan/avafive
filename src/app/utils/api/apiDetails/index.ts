@@ -27,4 +27,9 @@ export const queries: CustomEndPoints = {
     transformResponse: (res) => commonTransform(res),
     method: "GET",
   },
+  productDetails: {
+    url: "/products/",
+    transformResponse: (res) => commonTransform(res),
+    method: "GET",
+  },
 };

@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./components/Header/Header";
 import { CustomProvider } from "./CustomProvider";
 import Footer from "./components/Footer/Footer";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,8 @@ export default function RootLayout({
         <CustomProvider>
           <>
             <div className={` max-w-7xl mx-auto`}>
+              <Toaster />
+
               <Header />
               {children}
             </div>
