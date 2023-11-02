@@ -27,7 +27,7 @@ export const ProductCard: React.FC<{
           }
         />
       </div>
-      <div className="flex justify-between items-start py-3">
+      <div className="flex gap-10 lg:justify-between items-start py-3">
         <div className="flex flex-col gap-2">
           <p className="font-medium">{title}</p>
           <p className="text-sm text-[#626262]">{brand}</p>

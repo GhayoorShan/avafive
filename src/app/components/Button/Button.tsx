@@ -20,7 +20,7 @@ export const Button: React.FC<{
 }) => {
   return (
     <button
-      className={`rounded-lg font-medium text-[16px] md:text-[16px] disabled  ${
+      className={`rounded-lg font-medium text-[16px] md:text-[16px] disabled min-w-[160px]  ${
         !outline
           ? "bg-primary text-white"
           : "text-primary border border-primary"

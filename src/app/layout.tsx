@@ -23,9 +23,8 @@ export default function RootLayout({
       <body className={`${inter.className} `}>
         <CustomProvider>
           <>
-            <div className={` max-w-7xl mx-auto`}>
+            <div className={` max-w-7xl mx-auto p-5 lg:p-0`}>
               <Toaster />
-
               <Header />
               {children}
             </div>

@@ -9,26 +9,30 @@ type Props = {};
 
 export default function Header({}: Props) {
   return (
-    <header className="h-20 flex items-center justify-between ">
-      <div className="flex justify-start gap-8">
-        <Link href={{ pathname: "/" }}>
-          <Image src={logo} alt="logo" />
-        </Link>
-
-        <nav className="flex flex-row gap-4">
-          {navItems.map((item, index) => (
-            <Link
-              className="no-underline hover:underline text-sm font-medium"
-              key={index}
-              href={{ pathname: "/" }}
-              prefetch={false}
-            >
-              {item.label}
+    <header className="h-20 flex flex-col lg:flex-row items-center justify-between  mb-20 md:mb-0">
+      <div className="flex justify-start ">
+        <div className="flex flex-col md:flex-row gap-8">
+          <div className="flex justify-center">
+            <Link href={{ pathname: "/" }}>
+              <Image src={logo} alt="logo" />
             </Link>
-          ))}
-        </nav>
+          </div>
+
+          <nav className="flex flex-row gap-4 mb-4 md:mb-0">
+            {navItems.map((item, index) => (
+              <Link
+                className="no-underline hover:underline text-sm font-medium"
+                key={index}
+                href={{ pathname: "/" }}
+                prefetch={false}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
       </div>
-      <div className="flex justify-end gap-6">
+      <div className="flex justify-end gap-6 ">
         <Search
           onChange={(value: string) => console.log("Value: " + value)}
           placeholder={"Search for products or brands....."}

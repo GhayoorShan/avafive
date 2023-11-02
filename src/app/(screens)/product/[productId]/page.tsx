@@ -33,31 +33,31 @@ const ProductDetails: React.FC = () => {
         <img
           src={activeImg}
           alt=""
-          className="w-full h-full aspect-square object-cover rounded-xl"
+          className=" w-[350px] h-[350px] md:w-full md:h-full aspect-square object-cover rounded-xl"
         />
         <div className="flex flex-row justify-between h-24">
           <img
             src={productDetails?.images[0]}
             alt=""
-            className="w-24 h-24 rounded-md cursor-pointer"
+            className="w-16 h-16 md:w-24 md:h-24 rounded-md cursor-pointer"
             onClick={() => setActiveImage(productDetails?.images[0])}
           />
           <img
             src={productDetails?.images[1]}
             alt=""
-            className="w-24 h-24 rounded-md cursor-pointer"
+            className="w-16 h-16 md:w-24 md:h-24 rounded-md cursor-pointer"
             onClick={() => setActiveImage(productDetails?.images[1])}
           />
           <img
             src={productDetails?.images[2]}
             alt=""
-            className="w-24 h-24 rounded-md cursor-pointer"
+            className="w-16 h-16 md:w-24 md:h-24 rounded-md cursor-pointer"
             onClick={() => setActiveImage(productDetails?.images[2])}
           />
           <img
             src={productDetails?.images[3]}
             alt=""
-            className="w-24 h-24 rounded-md cursor-pointer"
+            className="w-16 h-16 md:w-24 md:h-24 rounded-md cursor-pointer"
             onClick={() => setActiveImage(productDetails?.images[3])}
           />
         </div>
@@ -74,27 +74,27 @@ const ProductDetails: React.FC = () => {
         <div className="py-5">Stars</div>
         {/* Price */}
         <div className=" flex gap-4 items-center pb-6 border-b border-[#0000001F]">
-          <span className="text-[40px] font-bold">
+          <span className="text-[30px] md:text-[40px] font-bold">
             ${productDetails?.price}
           </span>
-          <span className="text-[34px] font-semibold text-gray-light line-through">
+          <span className="text-[24px] md:text-[34px] font-semibold text-gray-light line-through">
             {productDetails?.price +
               (productDetails?.price / 100) *
                 productDetails?.discountPercentage}
           </span>
-          <span className="text-[20px] font-semibold text-[#FF404B]">
+          <span className="text-[18px] md:text-[20px] font-semibold text-[#FF404B]">
             {productDetails?.discountPercentage}%OFF
           </span>
         </div>
         {/* Delivey details */}
-        <div className="py-3 flex items-center gap-5">
-          <div className="w-1/3">
+        <div className="py-3 flex flex-col md:flex-row items-center gap-5 w-full">
+          <div className="md:w-1/3">
             <p className="text-[20px]">Delivery Details</p>
             <p className="text-[16px] text-[#626262]">
               Check estimated delivery date/pickup option.
             </p>
           </div>
-          <div className=" flex justify-between items-center p-4 w-2/3 bg-[#F1F1F1] rounded">
+          <div className=" flex justify-between gap-5 items-center p-4 w-ful md:w-2/3 bg-[#F1F1F1] rounded">
             <p className="text-[16px] font-medium">Apply Valid Pincode</p>
             <p className="text-[14px] font-semibold  text-primary">CHECK</p>
           </div>
@@ -120,7 +120,7 @@ const ProductDetails: React.FC = () => {
         </div>
 
         {/* Coupon */}
-        <div className="p-3 flex items-center gap-5 w-4/6 border  border-primary rounded-lg">
+        <div className="p-3 flex items-center gap-5 md:w-4/6 border  border-primary rounded-lg">
           <div className="w-2/3">
             <p className="text-[16px] font-medium pb-1">
               Get upto 30% Off on order value above $100

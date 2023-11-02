@@ -14,7 +14,7 @@ const NewArrival: React.FC = () => {
   productsData = productsData?.products.slice(6, 10);
 
   return (
-    <div className="flex justify-between pb-10 min-h-[300px] px-5">
+    <div className="flex flex-col lg:flex-row justify-between pb-10 min-h-[300px] px-5">
       {isUpdating ? (
         <div className="flex justify-center items-center w-full">
           <SyncLoader color="#1B4B66" />

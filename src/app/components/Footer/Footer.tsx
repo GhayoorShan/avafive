@@ -20,7 +20,7 @@ type Props = {};
 export default function Footer({}: Props) {
   return (
     <div className="bg-primary ">
-      <footer className=" flex items-start  justify-between pt-8 pb-20 px-16 text-white max-w-7xl mx-auto">
+      <footer className=" flex flex-col lg:flex-row items-start  justify-between pt-8 pb-20 px-16 text-white max-w-7xl mx-auto">
         <div className="flex flex-row gap-16 ">
           <div className="flex flex-col gap-2 ">
             <p className="font-medium">Shop by Category</p>
@@ -64,13 +64,13 @@ export default function Footer({}: Props) {
         </div>
 
         <div>
-          <div className="flex justify-end gap-4 pt-3 pb-6">
+          <div className="flex md:justify-end gap-4 pt-7 md:pt3 pb-6 ">
             <Image src={facebook} alt="social" />
             <Image src={insta} alt="social" />
             <Image src={twitter} alt="social" />
             <Image src={youtube} alt="social" />
           </div>
-          <div className="flex justify-end gap-2 pb-2">
+          <div className="flex md:justify-end gap-2 pb-2">
             <Image src={location} alt="social" className="w-[24px]" />
             <p className="">United States</p>
           </div>

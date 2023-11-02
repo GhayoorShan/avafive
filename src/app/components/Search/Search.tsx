@@ -14,7 +14,7 @@ export default function Search({
   ...otherProps
 }: Props) {
   return (
-    <div className="relative w-full  md:w-[360px] h-11">
+    <div className="relative w-[200px]  md:w-[360px] h-11">
       <div className="absolute top-2 left-0 flex items-center pl-3 pointer-events-none ">
         {/* <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"> */}
         <Image src={search} alt="search" />

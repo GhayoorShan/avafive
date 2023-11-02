@@ -16,7 +16,7 @@ const Cart: React.FC<CartProps> = ({}) => {
   console.log("items", cartItems);
 
   return (
-    <div className="p-5 lg:px-0 min-h-[550px] flex flex-col lg:flex-row justify-between">
+    <div className=" lg:px-0 min-h-[550px] flex flex-col lg:flex-row justify-between">
       <div className="w-full lg:w-1/2">
         <p className="text-[34px] font-semibold text-primary">My Cart</p>
         <div className="flex">
