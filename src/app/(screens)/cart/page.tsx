@@ -67,15 +67,15 @@ const Cart: React.FC<CartProps> = ({}) => {
         </p>
         <div className="grid grid-cols-2 gap-3 pt-5">
           <p className=" font-medium  text-gray-light">Sub Total</p>
-          <p className=" font-medium text-end"></p>
+          <p className=" font-medium text-end">$3800</p>
           <p className=" font-medium  text-gray-light">Discount</p>
-          <p className=" font-medium text-end"></p>
+          <p className=" font-medium text-end">$100</p>
           <p className=" font-medium  text-gray-light">Delivery Fee</p>
           <p className=" font-medium text-end">$0.00</p>
-          <p className=" font-medium  text-gray-light">Grand Total</p>
-          <p className=" font-medium text-end"></p>
+          <p className=" font-semibold ">Grand Total</p>
+          <p className=" font-medium text-end">$3700</p>
         </div>
-        <div className="flex justify-between py-5">
+        <div className="flex justify-between py-10">
           <Button label="Place Order" isLoading={false} onClick={() => {}} />
           <Button
             label="Continue Shopping"
